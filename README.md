@@ -4,3 +4,5 @@ Updating this node cause realloc --> free old chunk, which is still referenced f
 The exploit is really simple and trivial - first, I exploit the dangling pointer to info disc, read the address of my chunk
 in the heap, get from this the address of libc, and then forge the vtable of my object for code execution.
 Instead of doing a classic rop (mprotect and jump to shellcode), I jump to system (Not important, both ways extremely easy).
+
+![alt text](https://github.com/saaramar/32c3-tree-pwn500/raw/master/tree_poc.png "")
